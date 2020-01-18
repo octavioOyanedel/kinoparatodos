@@ -23,6 +23,37 @@
             <!-- Section Description -->
         <div class="step-content grey lighten-3">
           <p>Obtener proyeccion para cada uno de los 14 numeros.</p>
+
+<table class="table">
+  <thead class="black white-text">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Numeros Último Sorteo</th>
+      <th scope="col">Proyección Estimada</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+        <td><a href=""><i class="far fa-eye"></i></a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+        <td><a href=""><i class="far fa-eye"></i></a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+        <td><a href=""><i class="far fa-eye"></i></a></td>
+    </tr>
+  </tbody>
+</table>
             <div class="row mt-1">
               <div class="col-md-12 text-right">
                 <button class="btn btn-light-green btn-sm">Obtener</button>
