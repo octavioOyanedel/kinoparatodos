@@ -9,10 +9,10 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
         @include('includes.css_mdb')
     </head>
-    <body class="fondo">
+    <body>
         <div id="app">
             @include('includes.nav')
-            <main class="p-4 container">
+            <main class="">
                 @yield('content')
             </main>
         </div>

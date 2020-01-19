@@ -1,121 +1,71 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-12 separacion-nav">
-            <h1 class="p-4 text-center titulos">Kino Para Todos</h1>
-            <p class="parrafos text-center">Sigue estos 3 sencillos pasos que se describen continuación para obtener un sorteo "candidato" Kino (Chile).</p>
-            <p class="parrafos text-center">Esta combinacion de numeros se genera por medio de <a href="" class="destacar-texto" data-toggle="modal" data-target="#basicExampleModal">proyección estadística</a> utilizando como base la totalidad de sorteos ganadores hasta la fecha.</p>
-<!-- Vertical Steppers -->
-<div class="row mt-1">
-  <div class="col-md-12">
-
-    <!-- Stepers Wrapper -->
-    <ul class="stepper stepper-vertical">
-
-      <!-- First Step -->
-      <li class="completed">
-        <a href="#!">
-          <span class="circle">1</span>
-          <span class="label">Primer paso</span>
-        </a>
-
-            <!-- Section Description -->
-        <div class="step-content grey lighten-3">
-          <p>Obtener proyeccion para cada uno de los 14 numeros.</p>
-
-<table class="table">
-  <thead class="black white-text">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Numeros Último Sorteo</th>
-      <th scope="col">Proyección Estimada</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-        <td><a href=""><i class="far fa-eye"></i></a></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-        <td><a href=""><i class="far fa-eye"></i></a></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-        <td><a href=""><i class="far fa-eye"></i></a></td>
-    </tr>
-  </tbody>
-</table>
-            <div class="row mt-1">
-              <div class="col-md-12 text-right">
-                <button class="btn btn-light-green btn-sm">Obtener</button>
-              </div>
+    <div class="separacion-nav separacion-pie fondo-principal text-light">
+        <div class="container">
+            <h1 class="siglas text-center">KPT</h1>
+            <div class="row">
+                <div class="col-md-12">
+                <p class="text-center">Kino Para Todos es una aplicación web que te ayudará a seleccionar un sorteo candidato para los sorteos Kino Chile. Este procedimiento se basa en 4 criterios (comparación numérica y proyección estadística) los cuales toman como referencia la totalidad se sorteos ganadores publicados hasta la fecha, permitiendo así, aumentar la probabilidad de éxito para los 14 aciertos.</p>
+                </div>
             </div>
-        </div>
-      </li>
 
-      <!-- Second Step -->
-      <li class="active">
-
-        <!--Section Title -->
-        <a href="#!">
-          <span class="circle">2</span>
-          <span class="label">Segundo paso</span>
-        </a>
-
-        <!-- Section Description -->
-        <div class="step-content grey lighten-3">
-          <p>Obtener cantidad de aciertos para cada una de las filas.</p>
-            <div class="row mt-1">
-              <div class="col-md-12 text-right">
-                <button class="btn btn-light-green btn-sm">Obtener</button>
-              </div>
-            </div>
-        </div>
-      </li>
-
-      <!-- Third Step -->
-      <li class="warning">
-
-        <a href="#!">
-          <span class="circle">3</span>
-          <span class="label">Tercer y último paso</span>
-        </a>
-        <!-- Section Description -->
-        <div class="step-content grey lighten-3">
-          <p>Obtener frecuencias para los 25 numeros.</p>
-            <div class="row mt-1">
-              <div class="col-md-12 text-right">
-                <button class="btn btn-light-green btn-sm">Obtener</button>
-              </div>
-            </div>
-        </div>        
-      </li>
-
-    </ul>
-    <!-- /.Stepers Wrapper -->
-
-  </div>
-</div>
-
-<!-- Steppers Navigation -->
-<div class="row mt-1">
-  <div class="col-md-12 text-right">
-    <button class="btn btn-flat btn-sm">Cancel</button>
-    <button class="btn btn-primary btn-sm">Next</button>
-  </div>
-</div>
-<!-- /.Vertical Steppers -->
         </div>
     </div>
+    <div class="container pt-4 text-center">
+        <div class="row">
+            <div class="col-md-12">             
+                <button type="button" class="btn btn-deep-orange btn-lg">Obtener Sorteo</button>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-4 text-center">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">             
+                <div class="row d-flex justify-content-center">
+                    <div class="col z-depth-1-half seleccionado">1</div>
+                    <div class="col z-depth-1-half no-seleccionado">2</div>
+                    <div class="col z-depth-1-half seleccionado">3</div>
+                    <div class="col z-depth-1-half no-seleccionado">4</div>
+                    <div class="col z-depth-1-half seleccionado">5</div>
+                </div> 
+                <div class="row d-flex justify-content-center">
+                    <div class="col z-depth-1-half seleccionado">6</div>
+                    <div class="col z-depth-1-half no-seleccionado">7</div>
+                    <div class="col z-depth-1-half no-seleccionado">8</div>
+                    <div class="col z-depth-1-half seleccionado">9</div>
+                    <div class="col z-depth-1-half no-seleccionado">10</div>
+                </div> 
+                <div class="row d-flex justify-content-center">
+                    <div class="col z-depth-1-half seleccionado">11</div>
+                    <div class="col z-depth-1-half seleccionado">12</div>
+                    <div class="col z-depth-1-half no-seleccionado">13</div>
+                    <div class="col z-depth-1-half no-seleccionado">14</div>
+                    <div class="col z-depth-1-half seleccionado">15</div>
+                </div> 
+                <div class="row d-flex justify-content-center">
+                    <div class="col z-depth-1-half no-seleccionado">16</div>
+                    <div class="col z-depth-1-half seleccionado">17</div>
+                    <div class="col z-depth-1-half seleccionado">18</div>
+                    <div class="col z-depth-1-half seleccionado">19</div>
+                    <div class="col z-depth-1-half no-seleccionado">20</div>
+                </div> 
+                <div class="row d-flex justify-content-center">
+                    <div class="col z-depth-1-half no-seleccionado">21</div>
+                    <div class="col z-depth-1-half seleccionado">22</div>
+                    <div class="col z-depth-1-half seleccionado">23</div>
+                    <div class="col z-depth-1-half seleccionado">24</div>
+                    <div class="col z-depth-1-half no-seleccionado">25</div>
+                </div>                                 
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+<div class="alert alert-warning" role="alert">
+  A simple warning alert—check it out!
+</div>
 @endsection
 
 @include('includes.modal_info')
