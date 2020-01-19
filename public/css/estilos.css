@@ -2,7 +2,7 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
-.fondo-nav{
+.fondo-nav, .fondo-footer{
 	background: #3E5C54 !important;
 }
 
@@ -13,7 +13,6 @@
 
 a:hover, i:hover{
 	color: #00AD80 !important;
-
 }
 
 .texto-brand, .siglas{
@@ -62,4 +61,26 @@ a:hover, i:hover{
 .no-seleccionado{
 	background: white;
 	color: grey;
+}
+
+.destacar{
+	font-weight: bold;
+}
+
+.texto-alerta, .destacar{
+	font-size: 12px;
+}
+
+.texto-footer{
+	color: #00AD80 !important;
+}
+
+.contenedor-spin{
+	margin-top: 25px;
+	margin-bottom: 200px;
+}
+
+.spiner{
+	border-color: #000 !important; 
+	stroke: #ffffff !important;
 }
