@@ -89,3 +89,7 @@ a:hover, i:hover{
 	width: 100%;
 	height: 450px;
 }
+
+.icono-usuario{
+	padding-right: 0 !important;
+}

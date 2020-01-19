@@ -28,7 +28,7 @@
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons">
                 <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light pl-4" title="Administrador">
+                    <a class="nav-link waves-effect waves-light pl-4 icono-usuario" title="Administrador">
                         <i class="fas fa-user"></i>
                     </a>
                 </li>
