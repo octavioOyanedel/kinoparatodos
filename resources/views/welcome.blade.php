@@ -22,9 +22,9 @@
     <div class="container pt-4 text-center">
         <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-4">
+            <div class="col-md-4 contenido">
                 <div class="contenedor-spin">
-                    <div class="spinner-border text-black-50" style="width: 4rem; height: 4rem;" role="status">
+                    <div class="spinner-border text-black-50 mt-4" style="width: 4rem; height: 4rem;" role="status">
                         <span class="sr-only">Cargando...</span>
                     </div>  
                     <p class="text-center mt-4">Cargando...</p>                
@@ -68,8 +68,7 @@
                     <div class="alert alert-warning mt-4 texto-alerta" role="alert">
                         <strong class="destacar">NOTA:</strong> Utiliza solamente esta combinación de números en cada sorteo Kino que apuestes, esto aumentará aún más tus probabilidades. 
                         <p><strong class="destacar">¡Buena suerte!</strong></p>
-                    </div>                     
-                </div>             
+                    </div>  
                           
             </div>
             <div class="col-md-4"></div>

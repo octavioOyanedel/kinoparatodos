@@ -84,3 +84,8 @@ a:hover, i:hover{
 	border-color: #000 !important; 
 	stroke: #ffffff !important;
 }
+
+.contenido{
+	width: 100%;
+	height: 450px;
+}
