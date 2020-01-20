@@ -59,24 +59,37 @@ a:hover, i:hover{
 	font-weight: bold;
 	font-family: 'Rubik Mono One', sans-serif !important;
 	letter-spacing: 3px;	
-	margin-bottom: 30px;
 }
 
 .texto-info{
-	padding-top: 40px;
-	padding-bottom: 40px;
-}
-
-.texto-blanco{
 	color: white;
+	height: 150px;
 }
 
 .fondo-principal{
 	background: #FF7043 !important;	
 }
 
+.centrar-div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .boton-obtener{
-	margin-top: 7%;
+	margin-top: 150px;
+}
+
+.descripcion{
+	font-size: 1.7rem;
+}
+
+.mas-info{
+	color: white !important;
+}
+
+.mas-info:hover{
+	color: #3E5C54 !important;
 }
 
 /*
@@ -95,32 +108,11 @@ a:hover, i:hover{
 	Media Query
 */
 
-@media (max-width: 768px){
-	.texto-descriptor{
-		font-size: 14px;
+@media (max-height: 768px){
+	.boton-obtener{
+		margin-top: 80px;
 	}
-
-	.grid-container-welcome{
-		grid-template-rows: 50% 1fr;  
-	}
-}
-
-@media (max-width: 576px){
-	.texto-descriptor{
-		font-size: 12px;
-	}
-
-	.grid-container-welcome{
-		grid-template-rows: 60% 1fr;  
-	}
-}
-
-@media (max-height: 600px){
-	.texto-descriptor{
-		font-size: 14px;
-	}
-
-	.grid-container-welcome{
-		grid-template-rows: 60% 1fr;  
+	.descripcion{
+		font-size: 1rem;
 	}
 }

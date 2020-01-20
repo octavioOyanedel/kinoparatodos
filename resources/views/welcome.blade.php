@@ -2,19 +2,15 @@
 
 @section('content')
     <div class="grid-container-welcome">
-        <div class="fondo-principal">
-            <div class="texto-info container">
-                <div>
-                    <h1 class="siglas text-center espacio-siglas texto-blanco">KPT</h1>
-                </div>
-                <div class="text-center texto-blanco texto-descriptor">
-                    <p>Kino Para Todos es una aplicación web que te ayudará a seleccionar un sorteo candidato para los sorteos Kino Chile. </p>
-                    <p>Este procedimiento se basa en 4 criterios (comparación numérica y proyección estadística) los cuales toman como referencia la totalidad se sorteos ganadores publicados hasta la fecha, permitiendo así, aumentar la probabilidad de éxito para los 14 aciertos.</p>
-                </div>            
+        <div class="fondo-principal centrar-div">
+            <div class="texto-info text-center">
+                <h1 class="siglas espacio-siglas">KPT</h1>
+                <p class="descripcion">Kino para todos te permite seleccionar de forma inteligente sorteos Kino Chile.</p> 
+                <small>Mas info <a href="" class="mas-info" data-toggle="modal" data-target="#basicExampleModal">acá</a></small>         
             </div>            
         </div>
 
-        <div class="text-center container">
+        <div class="text-center">
             <button type="button" class="btn btn-deep-orange btn-lg boton-obtener">Obtener Sorteo</button>
         </div>
     </div>
