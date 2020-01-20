@@ -5,7 +5,7 @@
 <div class="modal-dialog modal-md" role="document">
     <div class="modal-content">
         <div class="modal-header">
-            <h4 class="modal-title w-100 text-center" id="myModalLabel">¿Y cómo funciona?</h4>
+            <h4 class="modal-title w-100 text-center" id="myModalLabel">¿Y cómo funciona <span class="siglas-modal">KPT</span>?</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>

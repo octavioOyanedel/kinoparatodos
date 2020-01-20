@@ -105,6 +105,18 @@ a:hover, i:hover{
 }
 
 /*
+	Modal info
+*/
+
+.siglas-modal{
+	color: #FF7043 !important;	
+	font-weight: bold;
+	font-family: 'Rubik Mono One', sans-serif !important;
+	letter-spacing: 3px;
+	font-size: 1.7rem;	
+}
+
+/*
 	Media Query
 */
 
