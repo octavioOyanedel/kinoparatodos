@@ -10,13 +10,20 @@
         @include('includes.css_mdb')
     </head>
     <body>
-        <div id="app">
-            @include('includes.nav')
-            <main class="">
-                @yield('content')
-            </main>
+        <div id="app" class="grid-container">
 
-            @include('includes.footer')
+            <div>
+                @include('includes.nav')
+            </div>
+
+            <div>
+                @yield('content')
+            </div>   
+
+            <div class="fondo-footer">
+                @include('includes.footer')
+            </div>
+
         </div>
         @include('includes.js_mdb')
     </body>

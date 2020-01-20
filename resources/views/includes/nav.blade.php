@@ -1,8 +1,8 @@
 <!--Navbar -->
-<nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-dark fondo-nav scrolling-navbar">
-    <div class="container">  
-        <a class="navbar-brand texto-brand texto-nav" href="#">KPT</a>
-        <button class="navbar-toggler boton-menu-responsivo" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+<nav class="navbar navbar-expand-lg navbar-dark fondo-nav">
+    <div class="container">
+        <a class="navbar-brand texto-brand" href="#">KPT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
         aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -19,7 +19,7 @@
                 <li class="nav-item">
                     <a class="nav-link pl-4 pr-4" href="#">Sorteos</a>
                 </li>
-                <li class="nav-item dropdown texto-nav">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle pl-4 pr-4" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mantenedor</a>
                     <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
                         <a class="dropdown-item" href="#">Registrar</a>
@@ -34,6 +34,6 @@
                 </li>
             </ul>            
         </div>
-    </div> 
+    </div>
 </nav>
 <!--/.Navbar -->
