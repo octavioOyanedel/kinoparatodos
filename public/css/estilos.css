@@ -80,6 +80,10 @@ a:hover, i:hover{
 	margin-top: 150px;
 }
 
+.boton-obtener:hover{
+	color: white !important;
+}
+
 .descripcion{
 	font-size: 1.7rem;
 }

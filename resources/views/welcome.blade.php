@@ -11,7 +11,7 @@
         </div>
 
         <div class="text-center">
-            <button type="button" class="btn btn-deep-orange btn-lg boton-obtener">Obtener Sorteo</button>
+            <a href="{{ route('sorteo') }}" class="btn btn-deep-orange btn-lg boton-obtener text-white">Obtener Sorteo</a>
         </div>
     </div>
 @endsection
