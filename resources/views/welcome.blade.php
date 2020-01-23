@@ -8,7 +8,7 @@
             <p>parrafo1</p>
         </div>
         <div class="boton-welcome">
-            <a href="#" class="btn btn-deep-orange btn-lg boton-obtener">Obtener Sorteo</a>
+            <a href="#" class="btn btn-deep-orange btn-lg">Obtener Sorteo</a>
         </div>
     </section>
 @endsection
