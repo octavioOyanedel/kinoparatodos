@@ -7,8 +7,8 @@
 */
 
 .contenedor{
-	 display: grid;
-	 grid-template-rows: 80px  820px 150px;
+	display: grid;
+	grid-template-rows: 80px  820px 150px;
 }
 
 /*
@@ -27,19 +27,19 @@ nav .contenido-nav div .brand{
 }
 
 nav .contenido-nav div a:hover{
-	color: #3856D6 !important;
+	color: #FF7043 !important;
 }
 
 nav .contenido-nav{
 	display: grid;
-	background-color: #242B47;
+	background-color: white;
 	place-items: center; /*centrar texto*/
 	grid-auto-flow: column; /*ordena horizontalmente*/
 	align-content: space-evenly;
 }
 
 nav .contenido-nav a{
-	color: white !important;
+	color: #242B47 !important;
 }
 
 nav .contenido-nav .menu{
@@ -52,17 +52,18 @@ nav .contenido-nav .menu{
 
 nav .enlaces-menu{
 	display: none;
-	background-color: #242B47;
+	background-color: white; /*fondo enlaces responsivo*/
 	z-index: 1000;
 }
 
 nav .enlaces-menu a{
-	color: white !important;
+	color: #333 !important; /*fuente enlaces responsivo*/
 	padding: 20px;
 }
 
-nav div.enlaces-menu a:hover{	
-	background-color: #3856D6 !important;
+nav .enlaces-menu a:hover{	
+	background-color: #242B47 !important;
+	color: #FF7043 !important;
 }
 
 /*
@@ -70,7 +71,7 @@ nav div.enlaces-menu a:hover{
 */
 
 nav .contenido-nav .boton-menu button{
-	background-color: #242B47;
+	background-color: white; /*boton menu*/
 	border: 0px;
 	cursor: pointer;
 	padding: 0px;
@@ -81,7 +82,7 @@ nav .contenido-nav .boton-menu button{
 
 nav .contenido-nav .boton-menu button span{
 	border-radius: 5px;
-	background-color: white;
+	background-color: #242B47;
 	display: block;
 	width: 60%;
 	margin: 5px auto; 
@@ -180,7 +181,7 @@ nav .contenido-nav .boton-menu button .linea-inferior{
 	Media Queries
 */
 
-@media (max-width: 768px) {
+@media (max-width: 998px) {
 	nav .contenido-nav .boton-menu button{
 		display: initial;
 	}
@@ -188,4 +189,53 @@ nav .contenido-nav .boton-menu button .linea-inferior{
 	nav .contenido-nav .menu{
 		display: none;
 	}
+}
+
+/*
+	Contenido Welcome
+*/
+
+.contenedor section{
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+
+.contenedor section .texto-welcome{
+	padding: 20px;
+	background-color: #242B47;
+	color: white;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;	
+	place-items: center; /*centrar texto*/
+}
+
+.contenedor section .boton-welcome{
+	display: grid;
+	grid-template-rows: 1fr;	
+	place-items: center; /*centrar texto*/
+}
+
+/*
+	Footer
+*/
+
+.contenedor .contenido-footer{
+	text-align: center;
+	display: grid;
+	grid-template-rows: 1fr 30px;	
+	place-items: center; /*centrar texto*/
+}
+
+.enlaces-footer{
+	background-color: #242B47;
+	color: white;
+	width: 100%;
+	height: 100%;
+}
+
+.fecha-footer{
+	background-color: #FF7043;
+	color: #242B47;
+	width: 100%;
+	height: 100%;
 }

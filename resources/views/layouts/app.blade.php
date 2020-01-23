@@ -13,45 +13,17 @@
 
         <div id="app" class="contenedor">
             {{-- NAV --}}
-            <nav>
-                <div class="contenido-nav">   
-                    <div>
-                        <a href="" class="brand">KPT</a>
-                    </div>             
-                    <div class="menu">
-                        <a href="">Inicio</a>
-                        <a href="">Sorteo</a>
-                        <a href="">Criterios</a>
-                        <a href="">Listar</a>
-                        <a href="">Añadir</a>
-                        <a href="">Salir</a>
-                    </div>
-                    <div class="boton-menu">
-                        <button onclick="menu()">
-                            <span class="linea-superior"></span>
-                            <span class="linea-media"></span>
-                            <span class="linea-inferior"></span>
-                        </button>
-                    </div>                   
-                </div>
-                <div class="enlaces-menu">
-                    <a href="#">Inicio</a>
-                    <a href="#">Sorteo</a>
-                    <a href="#">Criterios</a>
-                    <a href="#">Listar</a>
-                    <a href="#">Añadir</a>
-                    <a href="#">Salir</a>
-                </div>
-            </nav>
+            @include('includes.nav')
             {{-- NAV --}}
-            <section>
-                <div>texto</div>
-                <div>boton</div>
-            </section>
-            <footer>
-                <div>enlaces adicionales</div>
-                <div>año correo</div>
+            {{-- SECCION PRINCIPAL --}}
+            @yield('content')
+            {{-- SECCION PRINCIPAL --}}
+            {{-- FOOTER --}}
+            <footer class="contenido-footer">
+                <div class="enlaces-footer">enlaces adicionales</div>
+                <div class="fecha-footer">año correo</div>
             </footer>
+            {{-- FOOTER --}}
         </div>
 
         @include('includes.js_mdb')
