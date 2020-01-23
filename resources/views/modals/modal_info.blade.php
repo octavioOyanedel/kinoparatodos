@@ -1,5 +1,5 @@
 <!-- Central Modal Small -->
-<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="welcome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
 <!-- Change class .modal-sm to change the size of the modal -->
 <div class="modal-dialog modal-md" role="document">

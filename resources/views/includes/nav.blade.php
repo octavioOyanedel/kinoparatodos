@@ -4,9 +4,9 @@
             <a href="" class="brand">KPT</a>
         </div>             
         <div class="menu">
-            <a href="">Inicio</a>
+            <a class="activar" href="{{ route('welcome') }}">Inicio</a>
             <a href="">Sorteo</a>
-            <a href="">Criterios</a>
+            <a href="{{ route('criterios') }}">Criterios</a>
             <a href="">Listar</a>
             <a href="">Añadir</a>
             <a href="">Salir</a>

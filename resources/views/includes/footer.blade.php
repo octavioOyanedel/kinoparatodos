@@ -1,10 +1,9 @@
-<!-- Footer -->
-<footer class="page-footer font-small fondo-footer">
-    <!-- Footer Links -->
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3"><span class="copy-footer">© {{ date('Y') }} Copyright:</span>
-    <a href="https://mdbootstrap.com/education/bootstrap/"> kinoparatodos@gmail.com</a>
+<footer class="contenido-footer">
+    <div class="enlaces-footer contenedor-principal-footer">
+        <p class="enlace-footer-blanco">Ayúdanos <a class="aca" href="">acá</a></p>   
+        <p class="enlace-footer-blanco">Contacto: kinoparatodos@gmail.com</p>          
     </div>
-    <!-- Copyright -->
+    <div class="fecha-footer contenedor-secundaria-footer">
+        <p class="enlace-footer-blanco">{{ date('Y') }} Valparaíso, Chile.</p>
+    </div>
 </footer>
-<!-- Footer -->

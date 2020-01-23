@@ -23,7 +23,9 @@ class KptController extends Controller
 
     public function criterios()
     {
-		return view('criterios');
+    	$sorteo = new Sorteo;
+    	$ultimo = $sorteo->obtenerSorteoMasReciente();
+		return view('criterios', compact('ultimo'));
     }
 
 

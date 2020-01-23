@@ -19,10 +19,7 @@
             @yield('content')
             {{-- SECCION PRINCIPAL --}}
             {{-- FOOTER --}}
-            <footer class="contenido-footer">
-                <div class="enlaces-footer">enlaces adicionales</div>
-                <div class="fecha-footer">año correo</div>
-            </footer>
+            @include('includes.footer')
             {{-- FOOTER --}}
         </div>
 
