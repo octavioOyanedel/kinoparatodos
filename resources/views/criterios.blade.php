@@ -44,7 +44,7 @@
 						</tr>					
 						<tr>
 							<td>Proyección</td>
-							<td><a href="" class="" data-toggle="modal" data-target="#n1"><i class="fas fa-chart-line"></i></a></td>
+							<td title="Ver gráfico."><a href="" class="" data-toggle="modal" data-target="#n1"><i class="fas fa-chart-line"></i></a></td>
 							<td>{{ $ultimo->n2 }}</td>
 							<td>{{ $ultimo->n3 }}</td>
 							<td>{{ $ultimo->n4 }}</td>

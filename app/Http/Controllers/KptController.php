@@ -23,8 +23,13 @@ class KptController extends Controller
 
     public function criterios()
     {
+    	//	obtener ultimo sorteo
     	$sorteo = new Sorteo;
     	$ultimo = $sorteo->obtenerSorteoMasReciente();
+
+    	// obtener estructura para criterios
+    	$sorteos = Sorteo::all();	
+    	obtenerProyeccion(poblarArrayPorColumna($sorteos), poblarArrayPorColumna($sorteos)[0]);
 		return view('criterios', compact('ultimo'));
     }
 
