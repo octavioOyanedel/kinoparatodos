@@ -29,10 +29,13 @@ class KptController extends Controller
     	$sorteo = new Sorteo;
     	$ultimo = $sorteo->obtenerSorteoMasReciente();
 
-    	// obtener estructura para criterios
+    	// Obtener estructura para criterios
     	$sorteos = Sorteo::all();
 		$coleccionBase = crearColeccionBase($sorteos);
-		$coleccionProyeccion = crearColeccionProyeccion($coleccionBase);
+		$coleccionProyeccion = crearColeccionProyeccion($coleccionBase, $ultimo->toArray());
+		$coleccionPatrones = crearColeccionPatrones($coleccionProyeccion);
+		$coleccionPatronesFinales = crearColeccionPatronesFinales($coleccionPatronesFinales);
+//dd($coleccionPatronesFinales);
 		return view('criterios', compact('ultimo'));
     }
 
