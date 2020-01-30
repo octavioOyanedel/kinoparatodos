@@ -3,8 +3,76 @@
 	/*
 		Crea colección de patrones con número siguiente y suma
 	*/
-	function crearColeccionPatronesFinales($coleccionPatronesFinales){
-		
+	function crearColeccionPatronesFinales($coleccionProyeccion, $coleccionPatrones, $coleccionNumeros){
+		$coleccion = array();
+		$indice = 0;
+		foreach ($coleccionPatrones as $patron) {
+			$patronFinal = array();
+			$resultado = obtenerPatronesConSuma($coleccionProyeccion[$indice], $patron, $coleccionNumeros[$indice]);
+			if($resultado != null){
+				$patronFinal = $patron;
+				array_push($patronFinal, $resultado);
+			}
+			array_push($coleccion, $patronFinal);
+			$indice++;
+		}
+		return $coleccion;
+	}
+
+	/*
+		Obtener patrones con suma para cada combinación
+	*/
+	function obtenerPatronesConSuma($proyeccion, $patrones, $numeros){
+		$coleccion = array();
+		for ($i = 0; $i < count($numeros); $i++) { 
+			return armarPatronParaSumar($proyeccion, $patrones, $numeros[$i]);			
+		}	
+	}
+
+	/*
+		Arma patrón con número y suma coincidencias
+	*/
+	function armarPatronParaSumar($proyeccion, $patrones, $numero){
+		foreach ($patrones as $patron) {
+			$patronNumero = $patron;
+			array_push($patronNumero, $numero);
+			return buscarPatronNumeroEnProyeccion($proyeccion, $patronNumero);
+		}
+	}
+
+	/*
+		Búscar patrón en proyección, contar coincidencias
+	*/
+	function buscarPatronNumeroEnProyeccion($proyeccion, $patronNumero){
+		//dd($patronNumero);
+		$suma = 0;
+		for ($i = 0; $i < (count($proyeccion) - count($patronNumero)); $i++) { 
+			$contador = 0;
+			for ($j = 0; $j < count($patronNumero); $j++) { 
+				if($proyeccion[$i] === $patronNumero[$j]){
+					$contador++;
+				}
+			}
+			if($contador === count($patronNumero)){
+				$suma++;
+			}
+		}
+		if($suma > 0){
+			return $suma;
+		}else{
+			false;
+		}
+	}
+
+	/*
+		Crea colección de patrones con número siguiente y suma
+	*/
+	function crearColeccionNumeros($coleccionPatrones){
+		$numeros = array();
+		foreach ($coleccionPatrones as $patron) {
+			array_push($numeros, obtenerNumerosArreglo($patron));
+		}
+		return $numeros;
 	}
 
 	/*
@@ -12,16 +80,9 @@
 	*/
 	function crearColeccionPatrones($coleccionProyeccion){
 		$coleccion = array();
-		$numeros = array();
-		foreach ($coleccionProyeccion as $proyeccion) {
-			array_push($numeros, obtenerNumerosArreglo($proyeccion));
-		}
-
-		$indice = 0;
 		foreach ($coleccionProyeccion as $proyeccion) {
 			// Añadir patron a coleccion
-			array_push($coleccion, obtenerPatrones($proyeccion, $numeros[$indice]));
-			$indice++;
+			array_push($coleccion, obtenerPatrones($proyeccion));
 		}
 		return $coleccion;
 	}
@@ -29,7 +90,7 @@
 	/*
 		Obtener arreglo patrón para coleccion
 	*/
-	function obtenerPatrones($proyeccion, $numeros){
+	function obtenerPatrones($proyeccion){
 		$patrones = array();
 		// Recorrido general de 0 a largo $proyeccion / 2 (largo máximo permitido para patrón)
 		$fin = (int) round((count($proyeccion) / 2), 0, PHP_ROUND_HALF_DOWN) - 1;

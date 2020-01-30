@@ -34,8 +34,9 @@ class KptController extends Controller
 		$coleccionBase = crearColeccionBase($sorteos);
 		$coleccionProyeccion = crearColeccionProyeccion($coleccionBase, $ultimo->toArray());
 		$coleccionPatrones = crearColeccionPatrones($coleccionProyeccion);
-		$coleccionPatronesFinales = crearColeccionPatronesFinales($coleccionPatronesFinales);
-//dd($coleccionPatronesFinales);
+		$coleccionNumeros = crearColeccionNumeros($coleccionProyeccion);
+		$coleccionPatronesFinales = crearColeccionPatronesFinales($coleccionProyeccion, $coleccionPatrones, $coleccionNumeros);
+dd($coleccionPatronesFinales);
 		return view('criterios', compact('ultimo'));
     }
 
