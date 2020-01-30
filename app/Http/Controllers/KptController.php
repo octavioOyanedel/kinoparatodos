@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Sorteo;
 use Illuminate\Http\Request;
+ini_set('memory_limit', '3000M');
+ini_set('max_execution_time', '0');
 
 class KptController extends Controller
 {
@@ -28,8 +30,9 @@ class KptController extends Controller
     	$ultimo = $sorteo->obtenerSorteoMasReciente();
 
     	// obtener estructura para criterios
-    	$sorteos = Sorteo::all();	
-    	obtenerProyeccion(poblarArrayPorColumna($sorteos), poblarArrayPorColumna($sorteos)[0]);
+    	$sorteos = Sorteo::all();
+		$coleccionBase = crearColeccionBase($sorteos);
+		$coleccionProyeccion = crearColeccionProyeccion($coleccionBase);
 		return view('criterios', compact('ultimo'));
     }
 

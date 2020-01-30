@@ -1,54 +1,48 @@
 <?php
 
 	/*
-		Obtiene columnas de sorteos y las guarda en array.
+		Crea colección base con 14 arreglos uno para cada fila
 	*/
-	function poblarArrayPorColumna($sorteos){
+	function crearColeccionProyeccion($coleccionBase){
+		$coleccion = array();
+
+	}
+
+	/*
+		Crea colección base con 14 arreglos uno para cada fila
+	*/
+	function crearColeccionBase($sorteos){
+		$coleccion = array();
+		for ($i = 1; $i <= 14; $i++) { 
+			array_push($coleccion, poblarArreglosBase($sorteos, $i));
+		}
+		return $coleccion;
+	}
+
+	/*
+		Poblar arreglos base
+	*/
+	function poblarArreglosBase($sorteos, $i){
 		$arreglo = array();
 		foreach ($sorteos as $sorteo) {
-			array_push($arreglo,$sorteo->n1);
+			switch ($i) {
+				case 1: array_push($arreglo,$sorteo->n1); break;
+				case 2: array_push($arreglo,$sorteo->n2); break;
+				case 3: array_push($arreglo,$sorteo->n3); break;
+				case 4: array_push($arreglo,$sorteo->n4); break;
+				case 5: array_push($arreglo,$sorteo->n5); break;
+				case 6: array_push($arreglo,$sorteo->n6); break;
+				case 7: array_push($arreglo,$sorteo->n7); break;
+				case 8: array_push($arreglo,$sorteo->n8); break;
+				case 9: array_push($arreglo,$sorteo->n9); break;
+				case 10: array_push($arreglo,$sorteo->n10); break;
+				case 11: array_push($arreglo,$sorteo->n11); break;
+				case 12: array_push($arreglo,$sorteo->n12); break;
+				case 13: array_push($arreglo,$sorteo->n13); break;
+				case 14: array_push($arreglo,$sorteo->n14); break;				
+			}
 		}
 		return $arreglo;
-	}
-
-	/*
-		Obtener patrón de proyección para gráfico.
-	*/
-	function obtenerProyeccion($arreglo, $numero){
-		// obtener arreglo de diferencias comparando último 
-		$proyeccionBase = array();
-		for ($i=0; $i < count($arreglo); $i++) { 
-			array_push($proyeccionBase,($arreglo[$i] - $numero));
-		}
-		obtenerMejorPatron($proyeccionBase);
-	}
-
-	/*
-		Buscar patrón mas largo y con mas repeticiones
-	*/
-	function obtenerMejorPatron($proyeccionBase){
-
-		// fin: largo máximo para recorrer arreglo 
-		$fin = (int) round((count($proyeccionBase) / 2), 0, PHP_ROUND_HALF_DOWN);
-		$finCrear = 2;
-
-		// loop crear patrones
-		for ($i = 0; $i < $fin - 1; $i++) { 
-			/*
-				fin arreglo par
-				fin arreglo impar
-			*/
-			for ($j = 0; $j < (2 + $i) - 1; $j++) { 
-				# code...
-			}
-			// loop proyecciones
-			for ($k = 0; $k < $fin - 1; $k++) { 
-				// si existe patron aumentar contador
-			}
-
-			// si contador > 0 guardar en colección de patrones
-
-		}
 	}
 
 ?>
