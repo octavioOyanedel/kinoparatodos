@@ -25,7 +25,7 @@ class KptController extends Controller
 
     public function criterios()
     {
-    	//	obtener ultimo sorteo
+    	// Obtener ultimo sorteo
     	$sorteo = new Sorteo;
     	$ultimo = $sorteo->obtenerSorteoMasReciente();
 
@@ -35,8 +35,9 @@ class KptController extends Controller
 		$coleccionProyeccion = crearColeccionProyeccion($coleccionBase, $ultimo->toArray());
 		$coleccionPatrones = crearColeccionPatrones($coleccionProyeccion);
 		$coleccionNumeros = crearColeccionNumeros($coleccionProyeccion);
-		$coleccionPatronesFinales = crearColeccionPatronesFinales($coleccionProyeccion, $coleccionPatrones, $coleccionNumeros);
-dd($coleccionPatronesFinales);
+		$coleccionPatronesNumero = crearColeccionPatronesNumero($coleccionProyeccion, $coleccionPatrones, $coleccionNumeros);
+		$coleccionPatronesCantidades = crearColeccionPatronesSuma($coleccionProyeccion, $coleccionPatronesNumero);
+dd($coleccionPatronesNumero);
 		return view('criterios', compact('ultimo'));
     }
 
