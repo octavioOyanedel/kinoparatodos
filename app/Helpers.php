@@ -8,7 +8,7 @@
 		$coleccion = array();
 		$indice = 0;
 		foreach ($coleccionPatronesNumero as $patronNumero) {
-			array_push($coleccion, contarCoincidenciasPatron($coleccionProyeccion[$indice], $patronNumero));
+			array_push($coleccion, crearCoincidenciasPatron($coleccionProyeccion[$indice], $patronNumero));
 			$indice++;
 		}
 		return $coleccion;
@@ -18,11 +18,11 @@
 		Contar coincidencias de patrón número en arreglo de proyección
 	*/
 
-	function contarCoincidenciasPatron($proyeccion, $patronNumero){
+	function crearCoincidenciasPatron($proyeccion, $patronNumero){
 		$coleccion = array();
 		foreach ($patronNumero as $patron) {
 			$arreglo = $patron;
-			$resultado = buscarPatronEnAreglo($proyeccion, $patronNumero);
+			$resultado = buscarPatronEnAreglo($proyeccion, $patron);
 			if($resultado != false){
 				array_push($arreglo, $resultado);
 				array_push($coleccion, $arreglo);
@@ -35,8 +35,24 @@
 		Búsca y cuenta coincidencias de patrón en arreglo proyección
 	*/
 
-	function buscarPatronEnAreglo($proyeccion, $patronNumero){
-		return 999;
+	function buscarPatronEnAreglo($proyeccion, $patron){
+		$suma = 0;
+		for ($i = 0; $i < (count($proyeccion) - count($patron)); $i++) { 
+			$contador = 0;
+			for ($j = 0; $j < ($i + count($patron) - 1); $j++) { 
+				if($proyeccion[$j] === $patron[$i]){
+					$contador++;
+				}
+			}
+			if($contador === count($patron)){
+				$suma++;
+			}
+		}
+		if($suma > 0){
+			return $suma;
+		}else{
+			false;
+		}
 	}
 
 	/*
