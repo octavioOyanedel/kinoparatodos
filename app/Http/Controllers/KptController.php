@@ -37,7 +37,7 @@ class KptController extends Controller
 		$coleccionNumeros = crearColeccionNumeros($coleccionProyeccion);
 		$coleccionPatronesNumero = crearColeccionPatronesNumero($coleccionProyeccion, $coleccionPatrones, $coleccionNumeros);
 		$coleccionPatronesCantidades = crearColeccionPatronesSuma($coleccionProyeccion, $coleccionPatronesNumero);
-dd($coleccionPatronesNumero);
+dd($coleccionPatronesCantidades);
 		return view('criterios', compact('ultimo'));
     }
 

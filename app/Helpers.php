@@ -6,8 +6,37 @@
 
 	function crearColeccionPatronesSuma($coleccionProyeccion, $coleccionPatronesNumero){
 		$coleccion = array();
+		$indice = 0;
+		foreach ($coleccionPatronesNumero as $patronNumero) {
+			array_push($coleccion, contarCoincidenciasPatron($coleccionProyeccion[$indice], $patronNumero));
+			$indice++;
+		}
+		return $coleccion;
+	}
 
-		//dd($coleccionPatronesNumero);
+	/*
+		Contar coincidencias de patrón número en arreglo de proyección
+	*/
+
+	function contarCoincidenciasPatron($proyeccion, $patronNumero){
+		$coleccion = array();
+		foreach ($patronNumero as $patron) {
+			$arreglo = $patron;
+			$resultado = buscarPatronEnAreglo($proyeccion, $patronNumero);
+			if($resultado != false){
+				array_push($arreglo, $resultado);
+				array_push($coleccion, $arreglo);
+			}
+		}
+		return $coleccion;
+	}
+
+	/*
+		Búsca y cuenta coincidencias de patrón en arreglo proyección
+	*/
+
+	function buscarPatronEnAreglo($proyeccion, $patronNumero){
+		return 999;
 	}
 
 	/*
