@@ -37,12 +37,14 @@
 
 	function buscarPatronEnAreglo($proyeccion, $patron){
 		$suma = 0;
-		for ($i = 0; $i < (count($proyeccion) - count($patron)); $i++) { 
+		for ($i = 0; $i < (count($proyeccion) - count($patron)); $i++) {
+			$indice = 0;
 			$contador = 0;
-			for ($j = 0; $j < ($i + count($patron) - 1); $j++) { 
-				if($proyeccion[$j] === $patron[$i]){
+			for ($j = $i; $j < $i + count($patron) - 1; $j++) {
+				if ($patron[$indice] === $proyeccion[$j]) {
 					$contador++;
 				}
+				$indice++;
 			}
 			if($contador === count($patron)){
 				$suma++;
@@ -66,7 +68,7 @@
 			array_push($coleccion, crearColeccionPatronesCantidades($proyeccion, $coleccionPatrones[$indice], $coleccionNumeros[$indice]));
 			$indice++;
 		}
-		return $coleccion;		
+		return $coleccion;
 	}
 
 	/*
@@ -76,12 +78,12 @@
 	function crearColeccionPatronesCantidades($proyeccion, $patrones, $numero){
 		//dd($patrones);
 		$coleccion = array();
-		for ($i = 0; $i < count($numero); $i++) { 
+		for ($i = 0; $i < count($numero); $i++) {
 			foreach ($patrones as $patron) {
-				$arreglo = $patron;				
+				$arreglo = $patron;
 				array_push($arreglo, $numero[$i]);
 				array_push($coleccion, $arreglo);
-			}			
+			}
 		}
 		return $coleccion;
 	}
@@ -119,10 +121,10 @@
 		$patrones = array();
 		// Recorrido general de 0 a largo $proyeccion / 2 (largo máximo permitido para patrón)
 		$fin = (int) round((count($proyeccion) / 2), 0, PHP_ROUND_HALF_DOWN) - 1;
-		for ($i = 0; $i < $fin; $i++) { 
+		for ($i = 0; $i < $fin; $i++) {
 			array_push($patrones, crearPatron($proyeccion, $i));
 		}
-		// 
+		//
 		return $patrones;
 	}
 
@@ -132,7 +134,7 @@
 
 	function crearPatron($proyeccion, $indice){
 		$arreglo = array();
-		for ($i = 0; $i <= $indice + 1; $i++) { 
+		for ($i = 0; $i <= $indice + 1; $i++) {
 			array_push($arreglo, $proyeccion[$i]);
 		}
 		return $arreglo;
@@ -144,7 +146,7 @@
 
 	function obtenerNumerosArreglo($arreglo){
 		$numeros = array();
-		for ($i = 0; $i < count($arreglo); $i++) { 
+		for ($i = 0; $i < count($arreglo); $i++) {
 			if($i === 0){
 				array_push($numeros, $arreglo[$i]);
 			}else{
@@ -192,7 +194,7 @@
 
 	function obtenerDiferencias($arreglo, $numero){
 		$diferencias = array();
-		for ($i = 0; $i < count($arreglo); $i++) { 
+		for ($i = 0; $i < count($arreglo); $i++) {
 			array_push($diferencias, ($arreglo[$i] - $numero));
 		}
 		return $diferencias;
@@ -204,7 +206,7 @@
 
 	function crearColeccionBase($sorteos){
 		$coleccion = array();
-		for ($i = 1; $i <= 14; $i++) { 
+		for ($i = 1; $i <= 14; $i++) {
 			array_push($coleccion, poblarArreglosBase($sorteos, $i));
 		}
 		return $coleccion;
@@ -231,7 +233,7 @@
 				case 11: array_push($arreglo,$sorteo->n11); break;
 				case 12: array_push($arreglo,$sorteo->n12); break;
 				case 13: array_push($arreglo,$sorteo->n13); break;
-				case 14: array_push($arreglo,$sorteo->n14); break;				
+				case 14: array_push($arreglo,$sorteo->n14); break;
 			}
 		}
 		return $arreglo;
